@@ -1,0 +1,10 @@
+.bookPreview {
+  grid-area: content1;
+  /* margin: auto; */
+}
+
+.bookInfo {
+  grid-area: content2;
+  /* margin: 10px 15px;
+  padding-left: 20px; */
+}

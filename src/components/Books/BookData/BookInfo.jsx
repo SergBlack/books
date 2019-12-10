@@ -1,8 +1,9 @@
 import React from "react";
+import styles from "./../Books.module.css";
 
 const BookInfo = () => {
   return (
-    <div className="book-info">
+    <div>
       <p>Автор</p>
       <h1>Название</h1>
       <p>Бумага/электронное издание</p>

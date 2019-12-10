@@ -1,9 +1,9 @@
 import React from "react";
-import book_img from "./../images/book.png";
+import book_img from "./../../../images/book.png";
 
 const BookPreview = () => {
   return (
-    <div className="book-preview">
+    <div>
       <a className="book-inside" href="./">
         <span> Заглянуть внутрь</span>
       </a>

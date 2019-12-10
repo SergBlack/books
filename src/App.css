@@ -1,37 +1,12 @@
 .wrapper {
   display: grid;
-  grid-template-columns: 200px 200px auto;
-  grid-template-rows: auto 250px 250px auto;
+  grid-template-columns: 200px 1fr auto;
+  grid-template-rows: auto 700px auto;
   grid-template-areas:
     "header header header"
     "sidebar content1 content2"
-    "sidebar content1 content2"
     "footer footer footer";
 }
-.header {
-  grid-area: header;
-  background: rgb(235, 97, 97);
-}
-
-.sidebar {
-  grid-area: sidebar;
-  background: rgb(205, 235, 97);
-}
-.book-preview {
-  grid-area: content1;
-  /* background: rgb(97, 168, 235); */
-  /* border: 1px solid #000000; */
-  margin: auto;
-}
-
-.book-info {
-  grid-area: content2;
-  /* background: rgb(97, 168, 235); */
-  /* border: 1px solid #000000; */
-  margin: 10px 15px;
-  padding-left: 20px;
-}
-.footer {
-  grid-area: footer;
-  background: rgb(180, 97, 235);
+.content {
+  grid-area: content;
 }
