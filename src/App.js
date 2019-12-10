@@ -9,11 +9,11 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <div className="wrapper">
-      <Header className="header" />
-      <Sidebar className="sidebar" />
-      <BookPreview className="book-preview" />
-      <BookInfo className="book-info" />
-      <Footer className="footer" />
+      <Header />
+      <Sidebar />
+      <BookPreview />
+      <BookInfo />
+      <Footer />
     </div>
   );
 }

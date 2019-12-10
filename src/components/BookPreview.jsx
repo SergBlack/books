@@ -3,7 +3,7 @@ import book_img from "./../images/book.png";
 
 const BookPreview = () => {
   return (
-    <div>
+    <div className="book-preview">
       <a className="book-inside" href="./">
         <span> Заглянуть внутрь</span>
       </a>

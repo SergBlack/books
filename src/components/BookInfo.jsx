@@ -2,7 +2,7 @@ import React from "react";
 
 const BookInfo = () => {
   return (
-    <div>
+    <div className="book-info">
       <p>Автор</p>
       <h1>Название</h1>
       <p>Бумага/электронное издание</p>
