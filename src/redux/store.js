@@ -1,4 +1,4 @@
-let booksData = {
+let store = {
   books: [
     {
       cover: "https://files.books.ru/pic/562001-563000/562047/562047.jpg",
@@ -31,7 +31,42 @@ let booksData = {
       date: "Дата выпуска 1600г",
       description: "Содержание книги таково - жил был крыс"
     }
+  ],
+  audiobooks: [
+    {
+      cover:
+        "https://audio-knigi.net/wp-content/uploads/2019/12/kaplyatvye.jpg",
+      author: "Лоуренс",
+      title: "Капля твердой материи",
+      type: "Аудиозапись",
+      isbn: "",
+      pages: "45 минут",
+      date: "Дата выпуска 2000г",
+      description: "Аудиоспектакль"
+    },
+    {
+      cover:
+        "https://audio-knigi.net/wp-content/uploads/2019/12/kaplyatvye.jpg",
+      author: "Лоуренс",
+      title: "Капля твердой материи",
+      type: "Аудиозапись",
+      isbn: "",
+      pages: "45 минут",
+      date: "Дата выпуска 2000г",
+      description: "Аудиоспектакль"
+    },
+    {
+      cover:
+        "https://audio-knigi.net/wp-content/uploads/2019/12/kaplyatvye.jpg",
+      author: "Лоуренс",
+      title: "Капля твердой материи",
+      type: "Аудиозапись",
+      isbn: "",
+      pages: "45 минут",
+      date: "Дата выпуска 2000г",
+      description: "Аудиоспектакль"
+    }
   ]
 };
 
-export default booksData;
+export default store;
