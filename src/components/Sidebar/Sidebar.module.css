@@ -1,8 +1,7 @@
-.a {
+.link {
   display: inline-block;
   color: white;
   font-weight: 700;
-  text-decoration: none;
   user-select: none;
   padding: 0.5em 2em;
   outline: none;
@@ -12,14 +11,18 @@
   width: 200px;
 }
 
-.a:hover {
+.link:hover {
   background: rgba(255, 255, 255, 0.2);
 }
 
-.a:active {
+.link:active {
   background: white;
 }
 
+.a {
+  text-decoration: none;
+  color: black;
+}
 .sidebar {
   grid-area: sidebar;
   background: rgb(205, 235, 97);
