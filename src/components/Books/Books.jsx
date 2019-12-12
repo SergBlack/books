@@ -3,9 +3,10 @@ import BookInfo from "./BookInfo/BookInfo";
 import styles from "./Books.module.css";
 
 const Books = props => {
-  let booksElement = props.books.map(el => {
+  let bookElement = props.books.map(el => {
     return (
       <BookInfo
+        id={el.id}
         author={el.author}
         title={el.title}
         type={el.type}
@@ -14,13 +15,14 @@ const Books = props => {
         date={el.date}
         description={el.description}
         cover={el.cover}
+        comments={el.comments}
       />
     );
   });
 
   return (
     <div className={styles.bookPage}>
-      <div>{booksElement}</div>
+      <div>{bookElement}</div>
     </div>
   );
 };

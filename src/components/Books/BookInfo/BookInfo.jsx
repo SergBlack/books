@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./../Books.module.css";
+import { NavLink, Route } from "react-router-dom";
+// import Comments from "./../Comments/Comments";
 
 const BookInfo = props => {
   return (
@@ -22,6 +24,7 @@ const BookInfo = props => {
           <li>{props.date}</li>
         </ul>
         <p>{props.description}</p>
+        <NavLink to="/comments">Комментарии</NavLink>
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ import Elbooks from "./components/Elbooks/Elbooks";
 import Childbooks from "./components/Childbooks/Childbooks";
 import VideoContent from "./components/VideoContent/VideoContent";
 import About from "./components/About/About";
+import Comments from "./components/Books/Comments/Comments";
 import Footer from "./components/Footer/Footer";
 
 function App(props) {
@@ -22,6 +23,10 @@ function App(props) {
         <Route
           path="/books"
           render={() => <Books books={props.store.books} />}
+        />
+        <Route
+          path="/comments"
+          render={() => <Comments bookComments={props.store.bookComments} />}
         />
         <Route
           path="/audiobooks"
