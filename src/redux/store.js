@@ -9,8 +9,7 @@ let store = {
       isbn: "ISBN number 1",
       pages: "500 страниц",
       date: "Дата выпуска 1900г",
-      description: "Содержание книги таково - жил был кот",
-      comments: ["book id=1 comment 1", "comment 2", "comment 3"]
+      description: "Содержание книги таково - жил был кот"
     },
     {
       id: "2",
@@ -22,8 +21,7 @@ let store = {
       isbn: "ISBN number 2",
       pages: "600 страниц",
       date: "Дата выпуска 1800г",
-      description: "Содержание книги таково - жил был пес",
-      comments: ["book id=2 comment 1", "comment 2", "comment 3"]
+      description: "Содержание книги таково - жил был пес"
     },
     {
       id: "3",
@@ -34,22 +32,21 @@ let store = {
       isbn: "ISBN number 3",
       pages: "700 страниц",
       date: "Дата выпуска 1600г",
-      description: "Содержание книги таково - жил был крыс",
-      comments: ["book id=3 comment 1", "comment 2", "comment 3"]
+      description: "Содержание книги таково - жил был крыс"
     }
   ],
   bookComments: [
     {
       id: "1",
-      comments: ["book id=1 comment 1", "comment 2", "comment 3"]
+      comments: ["book id=1 comment 1", "comment 2", "comment 93"]
     },
     {
       id: "2",
-      comments: ["book id=2 comment 1", "comment 2", "comment 3"]
+      comments: ["book id=2 comment 1", "comment 2", "comment 93"]
     },
     {
       id: "3",
-      comments: ["book id=3 comment 1", "comment 2", "comment 3"]
+      comments: ["book id=3 comment 1", "comment 2", "comment 93"]
     }
   ],
   audiobooks: [

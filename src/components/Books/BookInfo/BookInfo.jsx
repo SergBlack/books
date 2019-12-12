@@ -1,14 +1,13 @@
 import React from "react";
 import styles from "./../Books.module.css";
-import { NavLink, Route } from "react-router-dom";
-// import Comments from "./../Comments/Comments";
+import { NavLink } from "react-router-dom";
 
 const BookInfo = props => {
   return (
     <div className={styles.bookInfo}>
       <div>
         <a className="book-inside" href="./">
-          <span> Заглянуть внутрь</span>
+          <span>Look inside</span>
         </a>
         <p>
           <img src={props.cover} alt="book cover"></img>
@@ -24,7 +23,7 @@ const BookInfo = props => {
           <li>{props.date}</li>
         </ul>
         <p>{props.description}</p>
-        <NavLink to="/comments">Комментарии</NavLink>
+        <NavLink to="/comments">Comments</NavLink>
       </div>
     </div>
   );

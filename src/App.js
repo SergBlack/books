@@ -26,7 +26,12 @@ function App(props) {
         />
         <Route
           path="/comments"
-          render={() => <Comments bookComments={props.store.bookComments} />}
+          render={() => (
+            <Comments
+              bookComments={props.store.bookComments}
+              books={props.store.books}
+            />
+          )}
         />
         <Route
           path="/audiobooks"

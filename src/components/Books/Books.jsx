@@ -15,7 +15,6 @@ const Books = props => {
         date={el.date}
         description={el.description}
         cover={el.cover}
-        comments={el.comments}
       />
     );
   });
