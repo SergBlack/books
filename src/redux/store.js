@@ -1,3 +1,5 @@
+import { rerender } from "./../render";
+
 let store = {
   books: [
     {
@@ -37,18 +39,25 @@ let store = {
   ],
   bookComments: [
     {
-      id: "1",
-      comments: ["book id=1 comment 1", "comment 2", "comment 93"]
+      id: 1,
+      user: "Jack",
+      comment: "I like it",
+      likesCount: 0
     },
     {
-      id: "2",
-      comments: ["book id=2 comment 1", "comment 2", "comment 93"]
+      id: 2,
+      user: "Black",
+      comment: "Its something strange",
+      likesCount: 4
     },
     {
-      id: "3",
-      comments: ["book id=3 comment 1", "comment 2", "comment 93"]
+      id: 3,
+      user: "Bill",
+      comment: "Kek, lol xD",
+      likesCount: 7
     }
   ],
+  newCommentText: "Text",
   audiobooks: [
     {
       cover:
@@ -86,4 +95,22 @@ let store = {
   ]
 };
 
+export const addComment = () => {
+  let comment = {
+    id: 4,
+    user: "NewUser",
+    comment: store.newCommentText,
+    likesCount: 0
+  };
+  store.bookComments.push(comment);
+  rerender(store);
+};
+
+export const updCommentText = text => {
+  store.newCommentText = text;
+  rerender(store);
+};
+
 export default store;
+
+window.store = store;

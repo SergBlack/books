@@ -29,7 +29,9 @@ function App(props) {
           render={() => (
             <Comments
               bookComments={props.store.bookComments}
-              books={props.store.books}
+              newCommentText={props.store.newCommentText}
+              addComment={props.addComment}
+              updCommentText={props.updCommentText}
             />
           )}
         />

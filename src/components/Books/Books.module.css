@@ -13,6 +13,21 @@
 }
 
 .comment {
-  display: grid;
-  border: 1px solid black;
+  padding: 5px;
+  margin: 5px;
+}
+.userName {
+  padding-left: 30px;
+  /* margin-left: 30px; */
+}
+.comment p {
+  border: 1px solid rgb(151, 149, 149);
+  padding: 10px;
+  /* margin: 10px; */
+  border-radius: 5px;
+}
+
+.likesCount {
+  text-align: right;
+  margin-right: 30px;
 }
