@@ -103,6 +103,7 @@ export const addComment = () => {
     likesCount: 0
   };
   store.bookComments.push(comment);
+  store.newCommentText = "";
   rerender(store);
 };
 

@@ -1,7 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import CommentElem from "./CommentElem";
-import { updCommentText } from "../../../redux/store";
 
 const Comments = props => {
   let commentElem = props.bookComments.map((el, index) => {
@@ -19,7 +18,6 @@ const Comments = props => {
 
   let addNewComment = () => {
     props.addComment();
-    props.updCommentText("");
   };
   let onChangeCommentText = () => {
     let text = newCommentElement.current.value;
