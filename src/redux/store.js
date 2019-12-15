@@ -1,4 +1,6 @@
-import { rerender } from "./../render";
+let rerender = () => {
+  console.log("store is changed");
+};
 
 let store = {
   books: [
@@ -132,7 +134,9 @@ export const updCommentText = text => {
   rerender(store);
 };
 
-export const observer = () => {};
+export const subscribe = observer => {
+  rerender = observer;
+};
 
 export default store;
 
