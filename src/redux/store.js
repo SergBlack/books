@@ -92,6 +92,26 @@ let store = {
       date: "Дата выпуска 2000г",
       description: "Аудиоспектакль"
     }
+  ],
+  audioBookComments: [
+    {
+      id: 1,
+      user: "Lili",
+      comment: "Gingeltail",
+      likesCount: 0
+    },
+    {
+      id: 2,
+      user: "Korbeen",
+      comment: "He is rich",
+      likesCount: 4
+    },
+    {
+      id: 3,
+      user: "Dallas",
+      comment: "WoW!",
+      likesCount: 7
+    }
   ]
 };
 
@@ -112,6 +132,8 @@ export const updCommentText = text => {
   rerender(store);
 };
 
+export const observer = () => {};
+
 export default store;
 
-window.store = store;
+// window.store = store;

@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./../AudioBooks.module.css";
+import { NavLink } from "react-router-dom";
 
 const AudioBookInfo = props => {
   return (
@@ -20,6 +21,7 @@ const AudioBookInfo = props => {
         </ul>
 
         <p>{props.description}</p>
+        <NavLink to="/audioComments">Comments</NavLink>
       </div>
     </div>
   );

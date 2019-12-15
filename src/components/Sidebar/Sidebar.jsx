@@ -6,32 +6,32 @@ const Sidebar = () => {
   return (
     <div className={styles.sidebar}>
       <div className={styles.link}>
-        <NavLink to="/books" className={styles.a}>
+        <NavLink to="/books" activeClassName={styles.avtive}>
           Books
         </NavLink>
       </div>
       <div className={styles.link}>
-        <NavLink to="/audiobooks" className={styles.a}>
+        <NavLink to="/audiobooks" activeClassName="active">
           Audiobooks
         </NavLink>
       </div>
       <div className={styles.link}>
-        <NavLink to="./elbooks" className={styles.a}>
+        <NavLink to="./elbooks" activeClassName="active">
           Electronic Books
         </NavLink>
       </div>
       <div className={styles.link}>
-        <NavLink to="./childbooks" className={styles.a}>
+        <NavLink to="./childbooks" activeClassName="active">
           Books for children
         </NavLink>
       </div>
       <div className={styles.link}>
-        <NavLink to="./video" className={styles.a}>
+        <NavLink to="./video" activeClassName="active">
           Video
         </NavLink>
       </div>
       <div className={styles.link}>
-        <NavLink to="./about" className={styles.a}>
+        <NavLink to="./about" activeClassName="active">
           About us
         </NavLink>
       </div>

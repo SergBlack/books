@@ -19,11 +19,11 @@
   background: white;
 }
 
-.a {
-  text-decoration: none;
-  color: black;
+.active {
+  color: rgb(52, 16, 214)9);
 }
-.sidebar {
+
+.sidebar .link {
   grid-area: sidebar;
   background: rgb(205, 235, 97);
 }

@@ -11,6 +11,7 @@ import Childbooks from "./components/Childbooks/Childbooks";
 import VideoContent from "./components/VideoContent/VideoContent";
 import About from "./components/About/About";
 import Comments from "./components/Books/Comments/Comments";
+import AudioComments from "./components/Audiobooks/AudioComments/AudioComments";
 import Footer from "./components/Footer/Footer";
 
 function App(props) {
@@ -38,6 +39,12 @@ function App(props) {
         <Route
           path="/audiobooks"
           render={() => <AudioBooks audiobooks={props.store.audiobooks} />}
+        />
+        <Route
+          path="/audioComments"
+          render={() => (
+            <AudioComments audioBookComments={props.store.audioBookComments} />
+          )}
         />
         <Route path="/elbooks" render={() => <Elbooks />} />
         <Route path="/childbooks" render={() => <Childbooks />} />
