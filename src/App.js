@@ -23,14 +23,14 @@ function App(props) {
         <Route exact path="/" render={() => <Main />} />
         <Route
           path="/books"
-          render={() => <Books books={props.store.books} />}
+          render={() => <Books books={props.state.books} />}
         />
         <Route
           path="/comments"
           render={() => (
             <Comments
-              bookComments={props.store.bookComments}
-              newCommentText={props.store.newCommentText}
+              bookComments={props.state.bookComments}
+              newCommentText={props.state.newCommentText}
               addComment={props.addComment}
               updCommentText={props.updCommentText}
             />
@@ -38,12 +38,12 @@ function App(props) {
         />
         <Route
           path="/audiobooks"
-          render={() => <AudioBooks audiobooks={props.store.audiobooks} />}
+          render={() => <AudioBooks audiobooks={props.state.audiobooks} />}
         />
         <Route
           path="/audioComments"
           render={() => (
-            <AudioComments audioBookComments={props.store.audioBookComments} />
+            <AudioComments audioBookComments={props.state.audioBookComments} />
           )}
         />
         <Route path="/elbooks" render={() => <Elbooks />} />
