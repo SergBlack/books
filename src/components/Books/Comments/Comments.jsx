@@ -4,7 +4,7 @@ import CommentElem from "./CommentElem";
 import {
   addCommentActionCreator,
   updCommentTextActionCreator
-} from "./../../../redux/store";
+} from "./../../../redux/books-reducer.js";
 
 const Comments = props => {
   let commentElem = props.bookComments.map((el, index) => {

@@ -1,5 +1,4 @@
-const ADD_COMMENT = "ADD-COMMENT";
-const UPD_COMMENT_TEXT = "UPD-COMMENT-TEXT";
+import booksReducer from "./books-reducer";
 
 let store = {
   _state: {
@@ -123,36 +122,12 @@ let store = {
     return this._state;
   },
   dispatch(action) {
-    switch (action.type) {
-      case ADD_COMMENT:
-        let comment = {
-          id: 4,
-          user: "NewUser",
-          comment: this._state.newCommentText,
-          likesCount: 0
-        };
-        this._state.bookComments.push(comment);
-        this._state.newCommentText = "";
-        this._rerender(this._state);
-        break;
-      case UPD_COMMENT_TEXT:
-        this._state.newCommentText = action.newText;
-        this._rerender(this._state);
-        break;
-      default:
-        return this._state;
-    }
+    booksReducer(this._state, action);
+    this._rerender(this.state);
   },
   subscribe(observer) {
     this._rerender = observer;
   }
-};
-
-export const addCommentActionCreator = () => {
-  return { type: ADD_COMMENT };
-};
-export const updCommentTextActionCreator = text => {
-  return { type: UPD_COMMENT_TEXT, newText: text };
 };
 
 export default store;
