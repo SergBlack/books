@@ -1,5 +1,9 @@
 import React from "react";
 import AudioCommentElem from "./AudioCommentElem";
+import {
+  updCommentAudioBooksPageAC,
+  addCommentAudioBooksPageAC
+} from "../../../redux/store";
 
 const AudioComments = props => {
   let audioBookCommentElem = props.audioBookComments.map((el, index) => {
@@ -11,8 +15,29 @@ const AudioComments = props => {
       />
     );
   });
+  let textRef = React.createRef();
+  const addComment = () => {
+    props.dispatch(addCommentAudioBooksPageAC());
+  };
 
-  return <div>{audioBookCommentElem}</div>;
+  const updCommentText = () => {
+    let text = textRef.current.value;
+    props.dispatch(updCommentAudioBooksPageAC(text));
+  };
+
+  return (
+    <div>
+      <div>{audioBookCommentElem}</div>
+      <textarea
+        onChange={updCommentText}
+        ref={textRef}
+        value={props.newCommentText}
+      ></textarea>
+      <div>
+        <button onClick={addComment}>Add Comment</button>
+      </div>
+    </div>
+  );
 };
 
 export default AudioComments;

@@ -3,6 +3,7 @@ import BookInfo from "./BookInfo/BookInfo";
 import styles from "./Books.module.css";
 
 const Books = props => {
+  debugger;
   let bookElement = props.books.map(el => {
     return (
       <BookInfo
