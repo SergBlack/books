@@ -31,8 +31,7 @@ function App(props) {
             <Comments
               bookComments={props.state.bookComments}
               newCommentText={props.state.newCommentText}
-              addComment={props.addComment}
-              updCommentText={props.updCommentText}
+              dispatch={props.dispatch}
             />
           )}
         />

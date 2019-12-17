@@ -1,3 +1,6 @@
+const ADD_COMMENT = "ADD-COMMENT";
+const UPD_COMMENT_TEXT = "UPD-COMMENT-TEXT";
+
 let store = {
   _state: {
     books: [
@@ -119,24 +122,37 @@ let store = {
   getState() {
     return this._state;
   },
-  addComment() {
-    let comment = {
-      id: 4,
-      user: "NewUser",
-      comment: this._state.newCommentText,
-      likesCount: 0
-    };
-    this._state.bookComments.push(comment);
-    this._state.newCommentText = "";
-    this._rerender(this._state);
-  },
-  updCommentText(text) {
-    this._state.newCommentText = text;
-    this._rerender(this._state);
+  dispatch(action) {
+    switch (action.type) {
+      case ADD_COMMENT:
+        let comment = {
+          id: 4,
+          user: "NewUser",
+          comment: this._state.newCommentText,
+          likesCount: 0
+        };
+        this._state.bookComments.push(comment);
+        this._state.newCommentText = "";
+        this._rerender(this._state);
+        break;
+      case UPD_COMMENT_TEXT:
+        this._state.newCommentText = action.newText;
+        this._rerender(this._state);
+        break;
+      default:
+        return this._state;
+    }
   },
   subscribe(observer) {
     this._rerender = observer;
   }
+};
+
+export const addCommentActionCreator = () => {
+  return { type: ADD_COMMENT };
+};
+export const updCommentTextActionCreator = text => {
+  return { type: UPD_COMMENT_TEXT, newText: text };
 };
 
 export default store;

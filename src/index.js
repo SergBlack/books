@@ -8,11 +8,7 @@ import store from "./redux/store";
 let rerender = () => {
   ReactDOM.render(
     <BrowserRouter>
-      <App
-        state={store.getState()}
-        addComment={store.addComment.bind(store)}
-        updCommentText={store.updCommentText.bind(store)}
-      />
+      <App state={store.getState()} dispatch={store.dispatch.bind(store)} />
     </BrowserRouter>,
     document.getElementById("root")
   );
