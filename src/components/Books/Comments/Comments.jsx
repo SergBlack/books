@@ -1,37 +1,21 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import CommentElem from "./CommentElem";
-import {
-  addCommentActionCreator,
-  updCommentTextActionCreator
-} from "./../../../redux/books-reducer.js";
 
 const Comments = props => {
-  let commentElem = props.bookComments.map((el, index) => {
-    return (
-      <div>
-        <CommentElem
-          comment={el.comment}
-          user={el.user}
-          likesCount={el.likesCount}
-        />
-      </div>
-    );
-  });
   let newCommentElement = React.createRef();
 
   let addNewComment = () => {
-    props.dispatch(addCommentActionCreator());
+    props.addNewComment();
   };
   let onChangeCommentText = () => {
     let text = newCommentElement.current.value;
-    props.dispatch(updCommentTextActionCreator(text));
+    props.onChangeCommentText(text);
   };
 
   return (
     <div>
       <h3>Comments</h3>
-      <div>{commentElem}</div>
+      <div>{props.commentElem}</div>
       <textarea
         onChange={onChangeCommentText}
         ref={newCommentElement}

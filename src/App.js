@@ -10,7 +10,7 @@ import Elbooks from "./components/Elbooks/Elbooks";
 import Childbooks from "./components/Childbooks/Childbooks";
 import VideoContent from "./components/VideoContent/VideoContent";
 import About from "./components/About/About";
-import Comments from "./components/Books/Comments/Comments";
+import CommentsContainer from "./components/Books/Comments/CommentsContainer";
 import AudioComments from "./components/Audiobooks/AudioComments/AudioComments";
 import Footer from "./components/Footer/Footer";
 
@@ -28,7 +28,7 @@ function App(props) {
         <Route
           path="/comments"
           render={() => (
-            <Comments
+            <CommentsContainer
               bookComments={props.state.booksPage.bookComments}
               newCommentText={props.state.booksPage.newCommentText}
               dispatch={props.dispatch}
