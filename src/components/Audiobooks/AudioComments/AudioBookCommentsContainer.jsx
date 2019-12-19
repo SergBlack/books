@@ -1,43 +1,38 @@
 import React from "react";
-import AudioCommentElem from "./AudioCommentElem";
+import AudioBookCommentElem from "./AudioBookCommentElem";
+import AudioBookComments from "./AudioBookComments";
 import {
   updCommentAudioBooksPageAC,
   addCommentAudioBooksPageAC
-} from "./../../../redux/audiobooks-reducer";
+} from "../../../redux/audiobooks-reducer";
 
-const AudioComments = props => {
+const audioBookCommentsContainer = props => {
   let audioBookCommentElem = props.audioBookComments.map((el, index) => {
     return (
-      <AudioCommentElem
+      <AudioBookCommentElem
         comment={el.comment}
         user={el.user}
         likesCount={el.likesCount}
       />
     );
   });
-  let textRef = React.createRef();
   const addComment = () => {
     props.dispatch(addCommentAudioBooksPageAC());
   };
 
-  const updCommentText = () => {
-    let text = textRef.current.value;
+  const updCommentText = text => {
     props.dispatch(updCommentAudioBooksPageAC(text));
   };
-
   return (
     <div>
       <div>{audioBookCommentElem}</div>
-      <textarea
-        onChange={updCommentText}
-        ref={textRef}
-        value={props.newCommentText}
-      ></textarea>
-      <div>
-        <button onClick={addComment}>Add Comment</button>
-      </div>
+      <AudioBookComments
+        addComment={addComment}
+        updCommentText={updCommentText}
+        newCommentText={props.newCommentText}
+      />
     </div>
   );
 };
 
-export default AudioComments;
+export default audioBookCommentsContainer;

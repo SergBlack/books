@@ -21,7 +21,7 @@ const AudioBookInfo = props => {
         </ul>
 
         <p>{props.description}</p>
-        <NavLink to="/audioComments">Comments</NavLink>
+        <NavLink to="/audioBookComments">Comments</NavLink>
       </div>
     </div>
   );

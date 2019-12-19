@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./../AudioBooks.module.css";
 
-const AudioCommentElem = props => {
+const AudioBookCommentElem = props => {
   return (
     <div className={styles.comment}>
       <b className={styles.userName}>{props.user}</b>
@@ -11,4 +11,4 @@ const AudioCommentElem = props => {
   );
 };
 
-export default AudioCommentElem;
+export default AudioBookCommentElem;

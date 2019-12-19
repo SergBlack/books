@@ -11,7 +11,7 @@ import Childbooks from "./components/Childbooks/Childbooks";
 import VideoContent from "./components/VideoContent/VideoContent";
 import About from "./components/About/About";
 import CommentsContainer from "./components/Books/Comments/CommentsContainer";
-import AudioComments from "./components/Audiobooks/AudioComments/AudioComments";
+import AudioBookCommentsContainer from "./components/Audiobooks/AudioComments/AudioBookCommentsContainer";
 import Footer from "./components/Footer/Footer";
 
 function App(props) {
@@ -42,9 +42,9 @@ function App(props) {
           )}
         />
         <Route
-          path="/audioComments"
+          path="/audioBookComments"
           render={() => (
-            <AudioComments
+            <AudioBookCommentsContainer
               audioBookComments={props.state.audioBooksPage.audioBookComments}
               newCommentText={props.state.audioBooksPage.newCommentText}
               dispatch={props.dispatch}
