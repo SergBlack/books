@@ -62,19 +62,24 @@ let initialState = {
 
 const audioBooksReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_COMMENT_AUDIO_BOOKS_PAGE:
+    case ADD_COMMENT_AUDIO_BOOKS_PAGE: {
       let commentAudioBook = {
         id: 4,
         user: "Mojo",
         comment: state.newCommentText,
         likesCount: 0
       };
-      state.audioBookComments.push(commentAudioBook);
-      state.newCommentText = "";
-      return state;
-    case UPD_COMMENT_TEXT_AUDIO_BOOKS_PAGE:
-      state.newCommentText = action.newTextAudioPage;
-      return state;
+      let stateCopy = { ...state };
+      stateCopy.audioBookComments = [...state.audioBookComments];
+      stateCopy.audioBookComments.push(commentAudioBook);
+      stateCopy.newCommentText = "";
+      return stateCopy;
+    }
+    case UPD_COMMENT_TEXT_AUDIO_BOOKS_PAGE: {
+      let stateCopy = { ...state };
+      stateCopy.newCommentText = action.newTextAudioPage;
+      return stateCopy;
+    }
     default:
       return state;
   }

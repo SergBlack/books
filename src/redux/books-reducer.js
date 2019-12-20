@@ -63,19 +63,24 @@ let initialState = {
 
 const booksReducer = (state = initialState, action) => {
   switch (action.type) {
-    case ADD_COMMENT:
+    case ADD_COMMENT: {
       let comment = {
         id: 4,
         user: "NewUser",
         comment: state.newCommentText,
         likesCount: 0
       };
-      state.bookComments.push(comment);
-      state.newCommentText = "";
-      return state;
-    case UPD_COMMENT_TEXT:
-      state.newCommentText = action.newText;
-      return state;
+      let stateCopy = { ...state };
+      stateCopy.bookComments = [...state.bookComments];
+      stateCopy.bookComments.push(comment);
+      stateCopy.newCommentText = "";
+      return stateCopy;
+    }
+    case UPD_COMMENT_TEXT: {
+      let stateCopy = { ...state };
+      stateCopy.newCommentText = action.newText;
+      return stateCopy;
+    }
     default:
       return state;
   }
