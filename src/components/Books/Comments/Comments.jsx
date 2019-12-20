@@ -1,7 +1,19 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import CommentElem from "./CommentElem";
 
 const Comments = props => {
+  let commentElem = props.bookComments.map((el, index) => {
+    return (
+      <div>
+        <CommentElem
+          comment={el.comment}
+          user={el.user}
+          likesCount={el.likesCount}
+        />
+      </div>
+    );
+  });
   let newCommentElement = React.createRef();
 
   let addNewComment = () => {
@@ -14,6 +26,7 @@ const Comments = props => {
 
   return (
     <div>
+      <div>{commentElem}</div>
       <h3>Comments</h3>
       <div>{props.commentElem}</div>
       <textarea

@@ -1,6 +1,16 @@
 import React from "react";
+import AudioBookCommentElem from "./AudioBookCommentElem";
 
 const AudioBookComments = props => {
+  let audioBookCommentElem = props.audioBookComments.map((el, index) => {
+    return (
+      <AudioBookCommentElem
+        comment={el.comment}
+        user={el.user}
+        likesCount={el.likesCount}
+      />
+    );
+  });
   let textRef = React.createRef();
   const addComment = () => {
     props.addComment();
@@ -13,6 +23,7 @@ const AudioBookComments = props => {
 
   return (
     <div>
+      <div>{audioBookCommentElem}</div>
       <textarea
         onChange={updCommentText}
         ref={textRef}
