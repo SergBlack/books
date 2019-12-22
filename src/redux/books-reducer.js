@@ -70,16 +70,14 @@ const booksReducer = (state = initialState, action) => {
         comment: state.newCommentText,
         likesCount: 0
       };
-      let stateCopy = { ...state };
-      stateCopy.bookComments = [...state.bookComments];
-      stateCopy.bookComments.push(comment);
-      stateCopy.newCommentText = "";
-      return stateCopy;
+      return {
+        ...state,
+        bookComments: [...state.bookComments, comment],
+        newCommentText: ""
+      };
     }
     case UPD_COMMENT_TEXT: {
-      let stateCopy = { ...state };
-      stateCopy.newCommentText = action.newText;
-      return stateCopy;
+      return { ...state, newCommentText: action.newText };
     }
     default:
       return state;
